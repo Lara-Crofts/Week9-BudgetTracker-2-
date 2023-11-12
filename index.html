@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BudgetTracker- Week_9</title>
+</head>
+<body>
+    <body>
+
+      <!-- container to expenses -->
+        <div id="container">
+          <h1>Expense Tracker</h1>
+
+          <!-- div for incomeamount innput and button -->
+          <div class="income_amount_input">
+            <input type="text" id="incomeDescription" placeholder="Enter income description">
+            <input type="number" id="incomeAmount" placeholder="Enter income amount">
+            <button id="addIncomeBtn">Add Income</button>
+          </div>
+
+             <!-- contains expense name and amount -->
+          <div class="form-group">
+            <input type="text" id="expenseDescription" placeholder="Enter expense description">
+            <input type="number" id="expenseAmount" placeholder="Enter amount">
+            <button id="addExpenseBtn">Add Expense</button>
+          </div>
+
+          <!-- display of list cost expenses go here  -->
+          <div class="expense-list">
+            <h2>Expense List: </h2>
+            <ul id="expenseList">
+              <!-- Expenses will be dynamically added to list format here -->
+              <li id="placeholderExpense">Expenses will appear here </li>
+            </ul>
+          </div>
+
+          <!-- total of expenses here -->
+          <div class="tracker">
+          <div class="total-expenses">
+            <h2>Total Expenses: <span id="totalExpensesAmount">0</span></h2>
+          </div>
+
+          <div class="total-income">
+            <h2>Total Income: <span id="totalIncomeAmount">0</span></h2>
+          </div>
+          <div class="total-budget">
+            <h2>Total Budget: <span id="totalBudgetAmount">0</span></h2>
+          </div>
+        </div>  
+       </div>
+
+        <script src="/script1.js"></script>
+      </body>
+      </html>

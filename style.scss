@@ -1,0 +1,161 @@
+//use this variable to set the color of a heading element 
+$primary-color: #c6538c;
+
+//mixin has 2 arguments/parameters  ..// Gradient backgrounds
+
+@mixin bgGradient {
+  background: linear-gradient(to right, #F9B16E, #F68080);
+    // background: linear-gradient(to right, $color1, $color2);
+}
+
+// then add to be included ... @include
+
+body {
+  @include bgGradient();
+    font-family: Arial, sans-serif;
+    background-color: #efebce;   
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    max-width: 50vw;
+    // height: auto;    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #5a5a41; 
+  }
+
+  h2 {
+    color: $primary-color; 
+  }
+
+  // #incomeDescription {
+  //   padding: 10px;
+  //   flex: 1;
+  //   margin-right: 10px;
+  // }
+
+  .income_amount_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    width: 40vw;
+    background: #d88136;
+    padding: 10px;
+    z-index: 2; //makes sure element remains on top 
+  }    
+  
+    // actual income inputbox
+    #incomeAmount, #incomeDescription {
+      position: relative;
+      width:10vw;
+      height: 2.5vh;
+      padding: 6px;
+      margin: 1px 5px;
+  }
+
+    // INCOME button 
+  #addIncomeBtn {
+    background-color: #c6538c;
+    color: white;
+    border: none;
+   padding: 10px 20px;
+    margin: 15px;
+    width: 10vw;
+    height: 5.2vh;
+    cursor: pointer;
+  }
+
+  #addIncomeBtn:hover {
+    background-color: #5a5a41;
+  }
+
+  .form-group {
+    position: relative;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50vw;
+    margin-bottom: 3vh;
+    flex-direction: row;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    flex: 1;
+    margin-right: 10px;
+    width: 10vw;
+  }
+  
+  .form-group button {
+    padding: 10px 20px;
+    background-color: #b9836e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-group button:hover {
+    background-color:#6a4925;
+  }
+  
+  .expense-list {
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .expense-list h2 {
+    margin: 0;
+  }
+  
+  .expense-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .expense-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .expense-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .tracker {
+    position: relative;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 3vh;
+    flex-direction: row;
+
+  }
+  .total-expenses h2, .total-income h2, .total-budget h2 {
+    margin: 0;
+    text-align: center;
+    color: #6a2528; 
+  }
+  
+  .total-expenses span {
+    font-weight: bold;
+  }
